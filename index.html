@@ -4,10 +4,34 @@
 		<meta charset="UTF-8" />
 		<link rel="icon" type="image/svg+xml" href="/icomply.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			body::before {
+				position: fixed;
+				left: 0;
+				top: 0;
+				content: '';
+				bottom: 0;
+				right: 0;
+				z-index: -1;
+				/* mix-blend-mode: darken;
+				mix-blend-mode: difference;
+				mix-blend-mode: exclusion;
+				mix-blend-mode: multiply; */
+			}
+
+			body::before {
+				filter: url(#noise);
+			}
+		</style>
 		<title>iComply</title>
 	</head>
 	<body>
 		<div id="root"></div>
+		<svg style="height: 0">
+			<filter id="noise">
+				<feTurbulence type="fractalNoise" baseFrequency="9" numOctaves="6" stitchTiles="stitch" />
+			</filter>
+		</svg>
 		<script type="module" src="/src/main.tsx"></script>
 	</body>
 </html>

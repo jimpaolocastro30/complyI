@@ -23,18 +23,13 @@ const Container = styled.div`
 `
 
 const Button = styled(Link)`
-	color: #444768;
+	background-color: #444768;
+	color: #fff;
 	border: 2px solid #444768;
-	background-color: transparent;
 	padding: 0.6rem 1rem;
 	font-weight: 500;
 	transition: 0.2s ease-in-out;
 	border-radius: 3px;
-
-	&:hover {
-		background-color: #444768;
-		color: #fff;
-	}
 `
 
 export default HeadNavigationMenu
